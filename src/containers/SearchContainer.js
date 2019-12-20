@@ -32,6 +32,7 @@ class SearchContainer extends Component {
 			                              occupation: data[0].title,
 			                              catch_phrase: data[0].catch_phrase,
 			                              age_range: data[0].age_range,
+			                              oid:data[0].rowid
 		                              }
 		  }))
 	          .catch(err => console.log('Could not get single character from search string', err))
@@ -52,6 +53,22 @@ class SearchContainer extends Component {
       this.setState({search: e.target.value})
   }
 
+  updateCharacter = (id, fName, lastID, occupID, catchPhrase, ageRange ) => {
+    SimpsonsModel.update({
+                        rowid: id,
+                        first_name: fName,
+                        last_nameID: lastID,
+                        occupationID: occupID,
+                        catch_phrase: catchPhrase,
+                        age_range: ageRange,
+                    })
+                 .then(data => {
+                    console.log("HI")
+                    this.setState({ characters: data })
+            })
+                .catch(err => console.log(err))
+  }
+
   render(){
 	//  console.log(this.state.singleCharacter)
     return(
@@ -64,7 +81,7 @@ class SearchContainer extends Component {
 	      </div>
 	      {
 	        this.state.singleCharacter !== undefined
-		? <Character character={this.state.singleCharacter} voiceActor={this.state.voiceActor} placesOfInterest={this.state.placesOfInterest}/>
+		? <Character updateCharacter={this.updateCharacter} character={this.state.singleCharacter} voiceActor={this.state.voiceActor} placesOfInterest={this.state.placesOfInterest}/>
 	        : (alert(`No characters found with the name ${this.state.search}! Try searching with first letter capitalized. Ex: 'Bart'`), 
 			this.setState({singleCharacter: []}))
 	      }
