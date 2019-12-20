@@ -1,13 +1,374 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: rgb(51, 51, 51);
+  font-family: 'Gloria Hallelujah', "Brush Script MT", cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*/////////////////////////////////////////////////
+//////////////// SIMPSONS BACKGROUND //////////////
+//////////////////////////////////////////////////
+ */
+section {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
+
+.simpsons-intro {
+  background: #58A7E0;
+  color: #F9E143;
+  font-family: 'Gloria Hallelujah', "Brush Script MT", cursive;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.above,
+.below {
+  height: 33vh;
+  background: #333;
+}
+
+.the-simpsons {
+  position: absolute;
+  -webkit-transition: all ease 5s;
+  transition: all ease 5s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  left: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.the-simpsons > p {
+  padding: 0;
+  margin: 0;
+  margin-top: -.5em;
+}
+
+.zoom {
+  -webkit-transform: scale(9);
+  transform: scale(9);
+  z-index: 100;
+}
+
+.top {
+  width: 100%;
+  height: 25%;
+}
+
+.middle {
+  width: 100%;
+  height: 25%;
+  top: 0;
+}
+
+.bottom {
+  width: 100%;
+  height: 25%;
+  top: 2%;
+}
+
+.clouds {
+  position: relative;
+  margin: 0;
+  z-index: 10;
+}
+
+.clouds > div {
+  position: absolute;
+  background: #fafbf0;
+  border-radius: 15em;
+  box-shadow: inset -1em -2em 0 0 #f7e7eb;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  min-width: 100px;
+}
+
+.clouds > div:before,
+.clouds > div:after {
+  position: absolute;
+  background: #fafbf0;
+  border-radius: 15em;
+  content: "";
+  box-shadow: inset -1em -1em 0 0 #f7e7eb;
+  min-width: 100px;
+}
+
+.cloud-one {
+  left: -9%;
+  top: -16%;
+  height: 61%;
+  width: 40%;
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+.cloud-one:before {
+  left: -62%;
+  top: -63%;
+  height: 145%;
+  width: 100%;
+}
+
+.cloud-one:after {
+  left: 1%;
+  top: 51%;
+  height: 57%;
+  width: 110%;
+}
+
+.cloud-two {
+  z-index: -1;
+  left: 28%;
+  top: 64%;
+  height: 38%;
+  width: 23%;
+}
+
+.cloud-two:before {
+  left: 13%;
+  top: -63%;
+  height: 145%;
+  width: 57%;
+}
+
+.cloud-two:after {
+  left: 1%;
+  top: 34%;
+  height: 80%;
+  width: 110%;
+}
+
+.cloud-three {
+  left: 61%;
+  top: 0;
+  height: 73%;
+  width: 46%;
+}
+
+.cloud-three:before {
+  left: 61%;
+  top: -50%;
+  height: 145%;
+  width: 61%;
+}
+
+.cloud-three:after {
+  left: -13%;
+  top: 66%;
+  height: 57%;
+  width: 97%;
+}
+
+.cloud-four {
+  left: -10%;
+  top: -4%;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+.cloud-four:before {
+  left: -59%;
+  top: -55%;
+  height: 126%;
+  width: 100%;
+}
+
+.cloud-four:after {
+  left: 1%;
+  top: 72%;
+  height: 50%;
+  width: 110%;
+}
+
+.cloud-five {
+  left: 58%;
+  top: 28%;
+  height: 77%;
+  width: 34%;
+}
+
+.cloud-five:before {
+  left: 44%;
+  top: -63%;
+  height: 145%;
+  width: 100%;
+}
+
+.cloud-five:after {
+  left: 41%;
+  top: 72%;
+  height: 50%;
+  width: 110%;
+}
+
+.cloud-six {
+  left: 49%;
+  top: 12%;
+  height: 85%;
+  width: 50%;
+}
+
+.cloud-six:before {
+  left: 62%;
+  top: 63%;
+  height: 145%;
+  width: 100%;
+}
+
+.cloud-six:after {
+  left: 1%;
+  top: 72%;
+  height: 50%;
+  width: 110%;
+}
+
+.cloud-seven {
+  left: -8%;
+  top: 74%;
+  height: 83%;
+  width: 37%;
+}
+
+.cloud-seven:before {
+  left: 0;
+  top: 63%;
+  height: 145%;
+  width: 100%;
+}
+
+.cloud-seven:after {
+  left: 0;
+  top: 72%;
+  height: 50%;
+  width: 110%;
+}
+
+.cloud-eight {
+  left: 39%;
+  top: 50%;
+  height: 84%;
+  width: 38%;
+}
+
+.cloud-eight:before {
+  left: 62%;
+  top: 63%;
+  height: 145%;
+  width: 100%;
+}
+
+.cloud-eight:after {
+  left: 1%;
+  top: 72%;
+  height: 50%;
+  width: 110%;
+}
+
+.cloud-nine {
+  left: 23%;
+  top: 38%;
+  height: 55%;
+  width: 26%;
+}
+
+.cloud-nine:before {
+  left: 62%;
+  top: 63%;
+  height: 102%;
+  width: 63%;
+}
+
+.cloud-nine:after {
+  left: -10%;
+  top: 72%;
+  height: 137%;
+  width: 95%;
+}
+
+span {
+  position: absolute;
+  background: #fafbf0;
+  border-radius: 100%;
+  content: "";
+}
+
+.left > .bubble-one {
+  left: 72%;
+  top: -19%;
+  width: 18%;
+  height: 60%;
+}
+
+.left > .bubble-two {
+  left: 41%;
+  top: -19%;
+  width: 35%;
+  height: 60%;
+}
+
+.right > .bubble-one {
+  left: 10%;
+  top: -19%;
+  width: 18%;
+  height: 60%;
+}
+
+.right > .bubble-two {
+  left: 20%;
+  top: -19%;
+  width: 27%;
+  height: 60%;
+}
+
+.to-left {
+  -webkit-transform: translate(-60%, 0);
+  transform: translate(-60%, 0);
+}
+
+.to-right {
+  -webkit-transform: translate(40%, 0);
+  transform: translate(40%, 0);
+}
+
+
+/*/////////////////////////////////////////////////
+//////////////// CHARACTER  DIV  /////////////////
+//////////////////////////////////////////////////
+ */
+
+.character{
+  font-color: #fff;
+}
+
+
+
+

@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.title{
+  color: #F9E143;
+}
+.nav-link{
+  display: inline-block;
+  padding: .3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.active{
+  border-bottom: 1px solid;
+}
+
+
