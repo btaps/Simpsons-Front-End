@@ -1,3 +1,1 @@
-![Image of wireframe](https://github.com/btaps/Simpsons-Front-End/blob/master/wireframe/IMG_0035.jpg)
-![Image of wireframe](https://github.com/btaps/Simpsons-Front-End/blob/master/wireframe/IMG_0036.jpg)
-![Image of wireframe](https://github.com/btaps/Simpsons-Front-End/blob/master/wireframe/IMG_0037.jpg)
+![Image of wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C381cb0131a2e3fa8d879214a7a40adaf/projects/Ma96803c216f91996c00ef232f42e32751576879264128/pages/c27a7537ac0f4f2e8138b692d09f5136/image/c27a7537ac0f4f2e8138b692d09f5136.png)
